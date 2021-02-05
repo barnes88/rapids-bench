@@ -1,7 +1,7 @@
-#Nvidia Spark-Rapids plugins benchmarks
+# Nvidia Spark-Rapids plugins benchmarks
 Get started in 5 minutes to run TPCH(like)
 
-##Setup Instructions:
+## Setup Instructions:
 
 ```
 source setup_env.sh
