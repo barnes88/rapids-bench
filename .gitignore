@@ -1,0 +1,6 @@
+*.json
+lib/
+spark-3.0.0-bin-hadoop3.2/
+tpch-dbgen/
+spark-event-logs/
+tables/
