@@ -3,5 +3,7 @@ lib/
 spark-3.0.0-bin-hadoop3.2/
 tpch-dbgen/
 spark-event-logs/
-tables/
+tpch-tables/
+tpcds-tables/
+tpcds-kit/
 output/

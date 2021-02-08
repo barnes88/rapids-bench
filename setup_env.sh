@@ -37,4 +37,13 @@ if [ ! -d $DBGEN_ROOT ]; then
 fi
 
 mkdir -p $BASH_ROOT/spark-event-logs
+
+# Install tpcds-kit datagenerator
+TPCDS_KIT_ROOT=$BASH_ROOT/tpcds-kit
+
+if [ ! -d $TPCDS_KIT_ROOT ]; then
+    git clone git@github.com:barnes88/tpcds-kit.git
+    make -C $TPCDS_KIT_ROOT/tools OS=LINUX
+fi
+
 export RAPIDS_BENCH_SETUP_WAS_RUN=
