@@ -14,7 +14,7 @@ for query in queries:
     filename = path + str(query) + ".txt"
     f = open(filename, "w")
     try:
-        output = run(["nsys profile -o " + str(query) + " python3 benchmark.py --benchmark tpcds --template template.txt --input ./tpcds-tables/100_none/ --input-format parquet --configs gpu --iterations 1 --query q" + str(query) +" 2>&1 | tee "+str(query)+"TPCDSprofiler.log"], stdout=f, shell=True, timeout=24*60*60)
+        output = run(["nsys profile -o " + str(query) + " python3 benchmark.py --gc-between-runs --benchmark tpcds --template template.txt --input ./tpcds-tables/100_none/ --input-format parquet --configs gpu --iterations 1 --query q" + str(query) +" 2>&1 | tee "+str(query)+"TPCDSprofiler.log"], stdout=f, shell=True, timeout=24*60*60)
     except:
         print("QUERY " + str(query) +" failed")
     finally:
